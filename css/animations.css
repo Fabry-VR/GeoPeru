@@ -1,0 +1,294 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-12px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fade-in-up:nth-child(1) { animation-delay: 0.2s; }
+.animate-fade-in-up:nth-child(2) { animation-delay: 0.4s; }
+.animate-fade-in-up:nth-child(3) { animation-delay: 0.6s; }
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate-left] {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate-left].visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animate-right] {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate-right].visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animate-scale] {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate-scale].visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-title {
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+.hero-btn {
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+.hero-scroll-indicator {
+  animation: bounce 2s ease infinite;
+}
+
+.curiosidad-card:hover .curiosidad-icon i {
+  animation: pulse 0.6s ease;
+}
+
+.region-card {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.timeline-item {
+  transition: all 0.6s ease;
+}
+
+.timeline-item[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.timeline-item[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd)[data-animate] {
+  transform: translateX(-30px) translateY(30px);
+}
+
+.timeline-item:nth-child(odd)[data-animate].visible {
+  transform: translateX(0) translateY(0);
+}
+
+.timeline-item:nth-child(even)[data-animate] {
+  transform: translateX(30px) translateY(30px);
+}
+
+.timeline-item:nth-child(even)[data-animate].visible {
+  transform: translateX(0) translateY(0);
+}
+
+.dato-card {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.dato-card:hover .dato-icon {
+  animation: pulse 0.6s ease;
+}
+
+.galeria-item {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.lightbox.active .lightbox-img {
+  animation: scaleIn 0.4s ease;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease infinite;
+  pointer-events: none;
+}
