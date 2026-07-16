@@ -75,7 +75,8 @@ function initModals() {
         'Corriente de Humboldt: Influye en la riqueza marina',
         'Reservas: Paracas, Lachay, Pantanos de Villa',
         'Principales puertos: Callao, Paita, Matarani, Ilo',
-        'Actividad pesquera: Una de las más importantes del mundo'
+        'Actividad pesquera: Una de las más importantes del mundo',
+        'Desastres naturales: Sismos frecuentes, tsunamis, fenómeno El Niño, huaycos'
       ]
     },
     sierra: {
@@ -88,7 +89,8 @@ function initModals() {
         'Cañones: Colca (uno de los más profundos del mundo)',
         'Valles interandinos: Mantaro, Urubamba, Vilcanota',
         'Lagunas: Parón, Pelagatos, Llanganuco',
-        'Agricultura: Papa, maíz, quinua, kiwicha, maca'
+        'Agricultura: Papa, maíz, quinua, kiwicha, maca',
+        'Desastres naturales: Heladas, granizadas, aluviones, sequías'
       ]
     },
     selva: {
@@ -101,7 +103,8 @@ function initModals() {
         'Selva alta (800 - 2,500 m): Ceja de selva con niebla',
         'Selva baja (80 - 800 m): Llanura amazónica inundable',
         'Comunidades nativas: Asháninkas, Shipibos, Aguarunas',
-        'Producción: Café, cacao, palma aceitera, madera'
+        'Producción: Café, cacao, palma aceitera, madera',
+        'Desastres naturales: Inundaciones, desbordes de ríos, deslizamientos, tormentas eléctricas'
       ]
     }
   };

@@ -178,6 +178,66 @@ const preguntas = [
     opciones: ['Ecuador', 'Trópico de Capricornio', 'Meridiano de Greenwich', 'Trópico de Cáncer'],
     correcta: 0,
     explicacion: 'La línea del ecuador cruza el norte del Perú, dividiendo el país en hemisferios norte y sur.'
+  },
+  {
+    pregunta: '¿Qué desastre natural es más frecuente en la costa peruana?',
+    opciones: ['Inundaciones', 'Sismos', 'Heladas', 'Tormentas eléctricas'],
+    correcta: 1,
+    explicacion: 'Los sismos son frecuentes en la costa peruana debido a la subducción de la placa de Nazca bajo la placa Sudamericana.'
+  },
+  {
+    pregunta: '¿Qué fenómeno climático afecta periódicamente la costa norte del Perú con lluvias intensas?',
+    opciones: ['La Niña', 'El Niño', 'El Monzón', 'El Huracán'],
+    correcta: 1,
+    explicacion: 'El fenómeno El Niño causa lluvias torrenciales e inundaciones en la costa norte del Perú cada ciertos años.'
+  },
+  {
+    pregunta: '¿Qué desastre natural es característico de la sierra peruana?',
+    opciones: ['Tsunamis', 'Heladas', 'Inundaciones costeras', 'Maremotos'],
+    correcta: 1,
+    explicacion: 'Las heladas son fenómenos recurrentes en la sierra peruana, especialmente en el altiplano, donde las temperaturas bajan drásticamente.'
+  },
+  {
+    pregunta: '¿Cómo se llaman los deslizamientos de lodo y piedras típicos de las quebradas costeras?',
+    opciones: ['Aludes', 'Huaycos', 'Derrumbes', 'Avalanchas'],
+    correcta: 1,
+    explicacion: 'Los huaycos son flujos de lodo y piedras que bajan por las quebradas de la costa y sierra peruana durante lluvias intensas.'
+  },
+  {
+    pregunta: '¿Qué desastre natural ocurre con frecuencia en la selva amazónica peruana?',
+    opciones: ['Sequías extremas', 'Inundaciones', 'Incendios forestales', 'Terremotos'],
+    correcta: 1,
+    explicacion: 'Las inundaciones son comunes en la selva amazónica por el desborde de sus ríos durante la temporada de lluvias.'
+  },
+  {
+    pregunta: '¿Qué placa tectónica causa los sismos en el Perú?',
+    opciones: ['Placa del Pacífico', 'Placa de Nazca', 'Placa Sudamericana', 'Placa de Cocos'],
+    correcta: 1,
+    explicacion: 'La placa de Nazca se desliza bajo la placa Sudamericana, proceso que genera los sismos en todo el territorio peruano.'
+  },
+  {
+    pregunta: '¿Qué región del Perú es más vulnerable a los tsunamis?',
+    opciones: ['Sierra', 'Selva', 'Costa', 'Amazonía'],
+    correcta: 2,
+    explicacion: 'La costa peruana es vulnerable a tsunamis generados por sismos submarinos en el océano Pacífico.'
+  },
+  {
+    pregunta: '¿Qué fenómeno de la sierra peruana daña los cultivos por bajas temperaturas?',
+    opciones: ['Granizada', 'Helada', 'Nevada', 'Lluvia ácida'],
+    correcta: 1,
+    explicacion: 'Las heladas dañan los cultivos en la sierra cuando las temperaturas descienden por debajo de 0°C.'
+  },
+  {
+    pregunta: '¿Qué tipo de desastre natural está asociado al desborde de ríos en la selva?',
+    opciones: ['Aluvión', 'Inundación', 'Derrumbe', 'Huayco'],
+    correcta: 1,
+    explicacion: 'Las inundaciones por desborde de ríos son el desastre natural más común en la selva amazónica peruana.'
+  },
+  {
+    pregunta: '¿Cuál fue el terremoto más destructivo en la historia del Perú?',
+    opciones: ['Lima 1746', 'Áncash 1970', 'Arequipa 2001', 'Pisco 2007'],
+    correcta: 1,
+    explicacion: 'El terremoto de Áncash de 1970 (7.9 MW) causó aluviones que sepultaron la ciudad de Yungay, siendo el más mortífero del país.'
   }
 ];
 
