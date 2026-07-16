@@ -12,8 +12,13 @@
   }
 
   .mapa-svg {
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
+  }
+
+  .mapa-info {
+    position: static;
+    max-height: none;
   }
 
   .footer-grid {
@@ -180,6 +185,16 @@
 
   .mapa-info {
     min-height: 200px;
+    max-height: none;
+  }
+
+  .mapa-legend {
+    gap: 12px;
+  }
+
+  .legend-item {
+    padding: 4px 10px;
+    font-size: 0.8rem;
   }
 }
 
@@ -289,9 +304,6 @@
     font-size: 1rem;
   }
 
-  .mapa-etiqueta {
-    font-size: 10px;
-  }
 }
 
 @media (max-width: 380px) {

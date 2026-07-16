@@ -592,65 +592,77 @@ body {
   justify-content: center;
 }
 
+@keyframes mapaFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .mapa-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
   align-items: start;
 }
 
 .mapa-svg {
   background: var(--bg-section-alt);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 16px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
+  position: relative;
 }
 
 .mapa-svg svg {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.mapa-region {
-  stroke: #2c3e50;
-  stroke-width: 1.5;
-  stroke-linejoin: round;
-  cursor: pointer;
-  outline: none;
-  transition: filter 0.4s, opacity 0.3s;
+.mapa-fallback {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
 }
 
-#region-costa { fill: #FFD600; }
-#region-sierra { fill: #8D5A3B; }
-#region-selva { fill: #2EAF45; }
-
-.mapa-region:hover {
-  filter: brightness(1.15) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+.mapa-fallback i {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
 
-.mapa-region.active {
-  filter: brightness(0.85) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.35));
-}
-
-
-.mapa-etiqueta {
-  font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 700;
-  fill: var(--gris-600);
+.mapa-tooltip {
+  position: absolute;
   pointer-events: none;
-  text-anchor: middle;
-  dominant-baseline: middle;
+  background: var(--gris-900);
+  color: var(--blanco);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .mapa-tooltip {
+  background: var(--gris-200);
+  color: var(--gris-900);
 }
 
 .mapa-info {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 0;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   min-height: 300px;
+  overflow-y: auto;
+  max-height: 650px;
+  position: sticky;
+  top: 90px;
 }
 
 .mapa-info-placeholder {
@@ -658,53 +670,265 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 320px;
   text-align: center;
   color: var(--text-muted);
   gap: 16px;
+  padding: 40px;
 }
 
 .mapa-info-placeholder i {
   font-size: 3rem;
+  opacity: 0.4;
 }
 
-.mapa-info-content h3 {
-  font-family: var(--font-secondary);
-  font-size: 1.8rem;
-  color: var(--verde-oscuro);
-  margin-bottom: 16px;
-}
-
-.mapa-info-content .region-color-bar {
-  height: 4px;
-  border-radius: 2px;
-  margin-bottom: 20px;
-}
-
-.mapa-info-content p {
-  color: var(--text-secondary);
-  margin-bottom: 12px;
+.mapa-info-placeholder p {
+  max-width: 260px;
   line-height: 1.6;
-}
-
-.mapa-info-content .info-grid {
-  display: grid;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.mapa-info-content .info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
   font-size: 0.95rem;
+}
+
+.mapa-info-content {
+}
+
+.mapa-info-content .dept-img {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapa-info-content .dept-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.25) 0%, transparent 60%);
+}
+
+.mapa-info-content .dept-img-overlay {
+  width: 100%;
+  padding: 20px 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.mapa-info-content .dept-img-overlay span {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blanco);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.mapa-info-content .dept-header {
+  padding: 20px 24px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mapa-info-content .dept-header h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.mapa-info-content .dept-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  flex-shrink: 0;
+}
+
+.mapa-info-content .dept-descripcion {
+  color: var(--text-secondary);
+  padding: 0 24px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.dept-section {
+  padding: 8px 24px 16px;
+}
+
+.dept-section:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dept-curiosidad {
+  border-bottom: none !important;
+}
+
+.dept-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dept-section-title i {
+  width: 18px;
+  color: var(--verde-peruano);
+  font-size: 0.85rem;
+}
+
+.dept-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dept-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--gris-100);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.dept-tag:hover {
+  border-color: var(--verde-claro);
+  color: var(--verde-peruano);
+  background: rgba(39, 174, 96, 0.05);
+}
+
+.dept-curiosidad p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  background: var(--gris-100);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--amarillo);
+}
+
+.dept-data-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--gris-100);
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.dept-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.dept-line i {
+  font-size: 1.1rem;
+  color: var(--verde-peruano);
+}
+
+.dept-line strong {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.mapa-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.legend-item:hover {
+  border-color: var(--border-color);
+  background: var(--gris-100);
+}
+
+.legend-item.legend-active {
+  border-color: var(--verde-peruano);
+  background: rgba(39, 174, 96, 0.06);
+}
+
+.legend-color {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
-.mapa-info-content .info-item i {
-  color: var(--verde-peruano);
-  margin-top: 3px;
-  width: 18px;
+[data-theme="dark"] .dept-tag {
+  background: var(--bg-card);
+  border-color: var(--gris-300);
+}
+
+[data-theme="dark"] .dept-curiosidad p {
+  background: var(--bg-card);
+  border-left-color: var(--amarillo);
+}
+
+[data-theme="dark"] .dept-data-row {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .legend-item:hover {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .legend-item[data-region="costa"] .legend-color {
+  background: #7D6608 !important;
+}
+
+[data-theme="dark"] .legend-item[data-region="sierra"] .legend-color {
+  background: #5D3A1A !important;
+}
+
+[data-theme="dark"] .legend-item[data-region="selva"] .legend-color {
+  background: #1D6B3C !important;
 }
 
 .curiosidades-grid {

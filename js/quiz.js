@@ -238,6 +238,132 @@ const preguntas = [
     opciones: ['Lima 1746', 'Áncash 1970', 'Arequipa 2001', 'Pisco 2007'],
     correcta: 1,
     explicacion: 'El terremoto de Áncash de 1970 (7.9 MW) causó aluviones que sepultaron la ciudad de Yungay, siendo el más mortífero del país.'
+  },
+  {
+    pregunta: '¿Cuál es la capital del departamento de Amazonas?',
+    opciones: ['Moyobamba', 'Chachapoyas', 'Iquitos', 'Cajamarca'],
+    correcta: 1,
+    explicacion: 'Chachapoyas es la capital del departamento de Amazonas, conocida por su cercanía a la fortaleza de Kuélap.'
+  },
+  {
+    pregunta: '¿Qué departamento alberga el nevado Huascarán, el pico más alto del Perú?',
+    opciones: ['Lima', 'Cusco', 'Áncash', 'Puno'],
+    correcta: 2,
+    explicacion: 'El Huascarán (6,768 m) se encuentra en la Cordillera Blanca, dentro del departamento de Áncash.'
+  },
+  {
+    pregunta: '¿En qué departamento se encuentra el Cañón del Colca?',
+    opciones: ['Cusco', 'Arequipa', 'Ayacucho', 'Moquegua'],
+    correcta: 1,
+    explicacion: 'El Cañón del Colca, uno de los más profundos del mundo, está ubicado en el departamento de Arequipa.'
+  },
+  {
+    pregunta: '¿Cuál es el plato típico más representativo de Arequipa?',
+    opciones: ['Ceviche', 'Rocoto relleno', 'Juane', 'Pachamanca'],
+    correcta: 1,
+    explicacion: 'El rocoto relleno es el plato bandera de Arequipa, preparado con rocoto, carne picada y queso gratinado.'
+  },
+  {
+    pregunta: '¿En qué departamento ocurrió la batalla final por la independencia del Perú?',
+    opciones: ['Lima', 'Ayacucho', 'Cusco', 'Junín'],
+    correcta: 1,
+    explicacion: 'La batalla de Ayacucho se libró el 9 de diciembre de 1824 en la Pampa de la Quinua, asegurando la independencia del Perú.'
+  },
+  {
+    pregunta: '¿Qué departamento es el principal productor de lácteos y conocido por sus baños termales?',
+    opciones: ['Cajamarca', 'La Libertad', 'Junín', 'Puno'],
+    correcta: 0,
+    explicacion: 'Cajamarca es reconocida por su producción de lácteos y los Baños del Inca, aguas termales de origen volcánico.'
+  },
+  {
+    pregunta: '¿Cuál es la capital del departamento de Ica?',
+    opciones: ['Nazca', 'Pisco', 'Ica', 'Chincha'],
+    correcta: 2,
+    explicacion: 'Ica es la capital del departamento del mismo nombre, cuna del pisco y puerta a las Líneas de Nazca.'
+  },
+  {
+    pregunta: '¿Qué ciudad de barro, declarada Patrimonio de la Humanidad, se encuentra en La Libertad?',
+    opciones: ['Machu Picchu', 'Chan Chan', 'Sacsayhuamán', 'Kuélap'],
+    correcta: 1,
+    explicacion: 'Chan Chan, la ciudad de adobe más grande del mundo, fue la capital del reino Chimú y está en La Libertad.'
+  },
+  {
+    pregunta: '¿Qué plato típico es originario de Lambayeque y lleva pato como ingrediente principal?',
+    opciones: ['Arroz con pato', 'Ceviche de pato', 'Seco de cabrito', 'Pato a la chiclayana'],
+    correcta: 1,
+    explicacion: 'El ceviche de pato es un plato tradicional de Lambayeque, preparado con pato cocido y aderezado con limón y cebolla.'
+  },
+  {
+    pregunta: '¿Cuál es la ciudad más grande del mundo a la que no se puede llegar por carretera?',
+    opciones: ['Pucallpa', 'Iquitos', 'Puerto Maldonado', 'Moyobamba'],
+    correcta: 1,
+    explicacion: 'Iquitos, capital de Loreto, es la ciudad más grande del mundo sin acceso por carretera; solo se llega por aire o río.'
+  },
+  {
+    pregunta: '¿Qué departamento es conocido como la "Capital de la Biodiversidad del Perú"?',
+    opciones: ['Loreto', 'Ucayali', 'Madre de Dios', 'San Martín'],
+    correcta: 2,
+    explicacion: 'Madre de Dios alberga la Reserva Nacional Tambopata y el Parque Nacional del Manu, con una biodiversidad extraordinaria.'
+  },
+  {
+    pregunta: '¿En qué departamento se encuentra el Lago Titicaca?',
+    opciones: ['Cusco', 'Puno', 'Arequipa', 'Moquegua'],
+    correcta: 1,
+    explicacion: 'El Lago Titicaca, el lago navegable más alto del mundo, se encuentra en el departamento de Puno a 3,812 m s. n. m.'
+  },
+  {
+    pregunta: '¿Qué departamento produce uno de los mejores piscos del Perú?',
+    opciones: ['Lima', 'Ica', 'Moquegua', 'Arequipa'],
+    correcta: 1,
+    explicacion: 'Ica es la principal región productora de pisco en el Perú, con valles como Ica, Pisco y Chincha.'
+  },
+  {
+    pregunta: '¿Cuál es la capital del departamento de San Martín?',
+    opciones: ['Tarapoto', 'Moyobamba', 'Tingo María', 'Juanjuí'],
+    correcta: 1,
+    explicacion: 'Moyobamba, conocida como la "Ciudad de las Orquídeas", es la capital del departamento de San Martín.'
+  },
+  {
+    pregunta: '¿Qué danza típica es originaria de la región de Piura?',
+    opciones: ['Marinera', 'Tondero', 'Huayno', 'Danza de tijeras'],
+    correcta: 1,
+    explicacion: 'El tondero es una danza tradicional del norte peruano, específicamente de Piura y Lambayeque.'
+  },
+  {
+    pregunta: '¿En qué departamento se encuentra la Fortaleza del Real Felipe?',
+    opciones: ['Lima', 'Callao', 'Ica', 'Áncash'],
+    correcta: 1,
+    explicacion: 'La Fortaleza del Real Felipe, construida en el siglo XVIII, se encuentra en la Provincia Constitucional del Callao.'
+  },
+  {
+    pregunta: '¿Qué catarata, descubierta al mundo en el año 2005, se encuentra en Amazonas?',
+    opciones: ['Catarata de Ahuashiyacu', 'Catarata de Gocta', 'Catarata de Yumbilla', 'Catarata de Antankallo'],
+    correcta: 1,
+    explicacion: 'La catarata de Gocta, con 771 m de altura, fue descubierta al mundo en 2005 en el departamento de Amazonas.'
+  },
+  {
+    pregunta: '¿Qué departamento tiene el clima más frío del Perú, con temperaturas promedio de 6°C?',
+    opciones: ['Puno', 'Pasco', 'Cusco', 'Junín'],
+    correcta: 1,
+    explicacion: 'Cerro de Pasco, capital de Pasco, es una de las ciudades más altas del mundo con temperatura promedio de 6°C.'
+  },
+  {
+    pregunta: '¿Cuál es el departamento más pequeño del Perú?',
+    opciones: ['Callao', 'Tumbes', 'Moquegua', 'Tacna'],
+    correcta: 1,
+    explicacion: 'Tumbes, con 4,669 km², es el departamento más pequeño del Perú, ubicado en la frontera con Ecuador.'
+  },
+  {
+    pregunta: '¿Qué etnia amazónica, reconocida por su arte geométrico, habita en Ucayali?',
+    opciones: ['Ashaninka', 'Shipibo-conibo', 'Aguaruna', 'Matsés'],
+    correcta: 1,
+    explicacion: 'Los shipibo-conibo son conocidos mundialmente por su arte geométrico y habitan en las riberas del río Ucayali.'
+  },
+  {
+    pregunta: '¿En qué departamento se encuentra el Bosque de Piedras de Huayllay?',
+    opciones: ['Huánuco', 'Junín', 'Pasco', 'Áncash'],
+    correcta: 2,
+    explicacion: 'El Bosque de Piedras de Huayllay, a más de 4,000 m de altitud, se encuentra en el departamento de Pasco.'
   }
 ];
 
