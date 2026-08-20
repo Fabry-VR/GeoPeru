@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fabry-vr.github.io/GeoPeru/sitemap.xml
